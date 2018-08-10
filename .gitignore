@@ -1,7 +1,12 @@
-# Jet Brains folder based projects #
+# folders #
 ####################################
 \.idea/
 \node_modules/
+\.sass-cache/
+
+# package #
+###################
+package-lock.json
 
 # Compiled source #
 ###################
