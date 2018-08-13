@@ -28,7 +28,7 @@
   },
   "git": {
     "scripts": {
-      "pre-push": "surge --project ./ --domain example-githooks.surge.sh"
+      "pre-push": "surge --project ./ --domain isaac-portfolio.surge.sh"
     }
   },
   "repository": {
