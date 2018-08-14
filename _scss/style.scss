@@ -1,55 +1,108 @@
 @import '_variables';
-
+@import '_animate';
 // block__element--modifier
-
-body{
+body {
     color: $gray-600;
     font: $font-family-sans-serif !important;
-    background-color: $dark; 
+    background-color: $dark;
     font-weight: 300;
 }
-.nav{
+
+.row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.nav {
     background: transparent;
-    &-link{
+    &-link {
         color: $light;
         text-transform: uppercase;
-        transition: 1s ease all;
-        &:hover{
+        &:hover {
             color: $light;
-            transition: 1s ease all;
-            text-decoration: underline;
+            &::after {
+                display: block;
+            }
+        }
+        &::after {
+            display: none;
+            transition: 1.5s ease display;
+            width: 100%;
+            height: 0.075em;
+            content: ' ';
+        }
+    }
+    &-item.active {
+        .nav-link {
+            &::after {
+                display: block;
+                height: 0.075em;
+                width: 45%;
+                transition: 1.5s ease display;
+                content: ' ';
+                background: #fefefe;
+            }
+            &:hover::after {
+                width: 100%;
+            }
         }
     }
 }
-.dark{
+
+.dark {
     color: $light;
 }
-.light{
+
+.light {
     background-color: $light;
 }
-.landing{
-    min-height: 100vh;
-    &--center{
-        height: calc(100vh - 56px);
+
+.landing {
+    min-height: calc(100vh - 56px);
+    &--center {
         flex-direction: column;
         align-items: center;
         justify-content: center;
         margin-top: 35vh;
+        position: absolute;
+        width: calc(100% - 30px);
+        .text-center {
+            width: 70%;
+            margin: auto;
+        }
     }
-    &--maintext{
+    &--maintext {
         font-size: 4.75rem;
         font-weight: 200;
     }
-    &--subtext{
+    &--subtext {
         text-transform: uppercase;
         font-weight: 100;
     }
 }
-.title{
-    &--light{
+
+.bio {
+    min-height: 100vh;
+}
+
+.invisible {
+    transition: opacity 0.5s ease;
+    opacity: 0.0;
+}
+
+.visible {
+    transition: opacity 0.5s ease;
+    opacity: 1.0;
+}
+
+.title {
+    &--light {
         color: $light;
     }
-    &--dark{
+    &--dark {
         color: $dark;
     }
 }
+
+@import '_tablet';
+@import '_phone';
