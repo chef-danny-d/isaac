@@ -1,5 +1,6 @@
 @import '_variables';
 @import '_animate';
+@import '_images';
 // block__element--modifier
 body {
     color: $gray-600;
@@ -13,38 +14,64 @@ body {
     margin-right: 0;
 }
 
+//.navbar-toggler-icon
+
 .nav {
     background: transparent;
+    &bar{
+        &-toggler{
+            &-icon{
+                color: $light;
+            }
+        }
+        &-nav{
+            &:first-child{
+                .nav-item{
+                    padding-right: 0;
+                }
+            }
+        }
+    }
     &-link {
         color: $light;
         text-transform: uppercase;
+        font-family: $secondary-font-family;
         &:hover {
             color: $light;
             &::after {
                 display: block;
+                background-color: $light;
+                transition: 1s ease display;
             }
         }
         &::after {
             display: none;
-            transition: 1.5s ease display;
+            transition: 1s ease display;
             width: 100%;
             height: 0.075em;
             content: ' ';
         }
     }
-    &-item.active {
-        .nav-link {
-            &::after {
-                display: block;
-                height: 0.075em;
-                width: 45%;
-                transition: 1.5s ease display;
-                content: ' ';
-                background: #fefefe;
+    &-item{
+        padding-right: 2.5em;
+        &.active{
+            .nav-link {
+                &::after {
+                    display: block;
+                    height: 0.075em;
+                    width: 45%;
+                    transition: 1s ease width;
+                    content: ' ';
+                    background: #fefefe;
+                }
+                &:hover::after {
+                    width: 100%;
+                    transition: 1s ease width;
+                }
             }
-            &:hover::after {
-                width: 100%;
-            }
+        }
+        &:last-child{
+            padding-right: 0;
         }
     }
 }
@@ -55,6 +82,16 @@ body {
 
 .light {
     background-color: $light;
+}
+
+.overlay{
+    width: 100%;
+    height: 100%;
+    background: $grad-0; /* Old browsers */
+    background: -moz-linear-gradient(-45deg, $grad-0 0%, $grad-50 50%, $grad-100 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, $grad-0 0%, $grad-50 50%, $grad-100 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, $grad-0 0%, $grad-50 50%, $grad-100 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2e2e2', endColorstr='#645b4e',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
 
 .landing {
@@ -83,24 +120,49 @@ body {
 
 .bio {
     min-height: 100vh;
+    .split{
+        &__right{
+            .image--fill{
+                max-width: 100%;
+                max-height: 60%;
+                .image--fill__img{
+                    background-image: $bio-image;
+                    margin-left: auto;
+                    margin-right: 0;
+                    height: 100%;
+                    opacity: 0.6;
+                    background-position: center;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                }
+            }
+        }
+    }
 }
 
 .invisible {
-    transition: opacity 0.5s ease;
+    transition: opacity 1s ease;
     opacity: 0.0;
 }
 
 .visible {
-    transition: opacity 0.5s ease;
+    transition: opacity 1s ease;
     opacity: 1.0;
 }
 
 .title {
+    display: flex;
+    align-items: center;
+    font-family: $secondary-font-family;
     &--light {
         color: $light;
     }
     &--dark {
-        color: $dark;
+        color: $dark--title;
+    }
+    &--light, &--dark{
+        font-size: 3em;
+        font-weight: 300;
     }
 }
 

@@ -1,12 +1,18 @@
 //colors
-$gray-600: #2e2b2c;
+$gray-600: rgb(46, 43, 44);
 $gray-700: rgb(29, 27, 28);
 $gray-800: rgb(17, 16, 16);
 $gray-900: rgb(8, 7, 8);
 $white: #fefefe;
 $yiq-text-dark: $gray-600;
 $dark: $gray-600;
+$dark--title: rgba(46, 43, 44, 0.6);
 $light: $white;
+
+$grad-0: rgba(226,226,226,1);
+$grad-50: rgba(190,181,165,1);
+$grad-100: rgba(100,91,78,1);
+
 :root {
     --blue: #007bff;
     --indigo: #6610f2;
@@ -39,6 +45,7 @@ $light: $white;
 
 //fonts
 $font-family-sans-serif: Lato;
+$secondary-font-family: Bahnschrift;
 $font-weight-bold: 900;
 //extra
 $enable-gradients: false;

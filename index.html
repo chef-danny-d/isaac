@@ -9,6 +9,7 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="css_lib/bootstrap.css">
   <link rel="stylesheet" href="css_lib/animate.min.css">
+  <script src="https://unpkg.com/feather-icons"></script>
   <link rel="stylesheet" href="css/style.min.css">
 
   <title>ISAAC THOMAS</title>
@@ -18,7 +19,7 @@
   <nav class="navbar navbar-expand-lg">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
       aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+      <span data-feather="menu" class="navbar-toggler-icon"></span>
     </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -84,35 +85,30 @@
       </div>
     </section>
 
-    <section class="light split bio col-md-12 col-sm-12">
-      <div class="row justify-content-center">
+    <section class="light split bio col-md-12 col-sm-12 row">
+      <div class="row col-md-12 justify-content-center title">
         <h3 class="title--dark">BIO</h3>
       </div>
-      <div data-scroll="toggle(.fromTopIn, .fromTopOut)" class="col-md-12">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id odio dolorem sint recusandae harum! Quidem quibusdam
-          quod, voluptates deserunt, asperiores illum reprehenderit laboriosam voluptate dolores nesciunt ipsa numquam dignissimos
-          impedit?</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id odio dolorem sint recusandae harum! Quidem quibusdam
-          quod, voluptates deserunt, asperiores illum reprehenderit laboriosam voluptate dolores nesciunt ipsa numquam dignissimos
-          impedit?</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id odio dolorem sint recusandae harum! Quidem quibusdam
-          quod, voluptates deserunt, asperiores illum reprehenderit laboriosam voluptate dolores nesciunt ipsa numquam dignissimos
-          impedit?</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id odio dolorem sint recusandae harum! Quidem quibusdam
-          quod, voluptates deserunt, asperiores illum reprehenderit laboriosam voluptate dolores nesciunt ipsa numquam dignissimos
-          impedit?</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id odio dolorem sint recusandae harum! Quidem quibusdam
-          quod, voluptates deserunt, asperiores illum reprehenderit laboriosam voluptate dolores nesciunt ipsa numquam dignissimos
-          impedit?</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id odio dolorem sint recusandae harum! Quidem quibusdam
-          quod, voluptates deserunt, asperiores illum reprehenderit laboriosam voluptate dolores nesciunt ipsa numquam dignissimos
-          impedit?</p>
+      <div data-scroll="toggle(.fromLeftIn, .fromLeftOut)" class="split__left col-md-6 col-sm-12">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed purus efficitur, sodales enim non, porta orci.
+          Nullam rhoncus nulla sed ullamcorper ornare. Maecenas a diam vulputate dolor commodo ultrices bibendum scelerisque
+          nisi. Proin feugiat ante in felis pellentesque aliquam. Aliquam viverra cursus porttitor. Nunc varius fringilla
+          erat, nec feugiat ex interdum sed. Quisque mollis felis at consequat pharetra.</p>
+        <p>Nulla vel mattis lorem, a ornare magna. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus
+          mus. Maecenas finibus, dolor vitae sollicitudin porta, felis arcu euismod ex, et interdum magna erat non metus.
+          Nullam at dapibus magna. Nam scelerisque bibendum lorem, ut blandit urna pharetra placerat. Vivamus a felis mattis
+          neque bibendum pharetra. Praesent non ornare neque. Aliquam elementum neque ac elit luctus sollicitudin.</p>
+        <p>Nunc eget mauris augue. Nulla sed diam ac velit euismod finibus vel vitae mi. Nullam hendrerit laoreet leo ac gravida.
+          Donec commodo volutpat lorem, non suscipit turpis fringilla eget. Nunc tempor fringilla ornare. Mauris consequat
+          leo id rhoncus volutpat. Aliquam sed tincidunt lectus. Proin congue elementum nunc, at tempus lacus ultricies non.
+          Integer eget semper ligula. Integer condimentum pretium mollis. Nam sed volutpat diam. Sed tincidunt nibh eget
+          est dapibus, quis blandit risus sollicitudin. Pellentesque id enim massa. Aliquam tortor massa, placerat sed mollis
+          vel, efficitur ac nisl. In nec eros suscipit, luctus justo eget, lobortis purus.</p>
       </div>
-      <div class="split__left col-md-6 col-sm-12">
-
-      </div>
-      <div class="split__right img--fill offset-md-6 col-md-6 col-sm-12">
-
+      <div data-scroll="toggle(.fromRightIn, .fromRightOut)" class="split__right offset-md-1 col-md-5 col-sm-12">
+        <div class="image--fill overlay">
+          <div class="image--fill__img" value="placeholder image until real one is provided by client"></div>
+        </div>
       </div>
     </section>
 
@@ -150,6 +146,9 @@
     document.addEventListener('DOMContentLoaded', function () {
       var trigger = new ScrollTrigger();
     });
+  </script>
+  <script>
+    feather.replace({'stroke-width': 1})
   </script>
 </body>
 
