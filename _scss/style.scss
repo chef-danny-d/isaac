@@ -14,8 +14,6 @@ body {
     margin-right: 0;
 }
 
-//.navbar-toggler-icon
-
 .nav {
     background: transparent;
     &bar{
@@ -88,25 +86,8 @@ body {
     width: 100%;
     height: 100%;
     background: $grad-0; /* Old browsers */
-    background: -moz-linear-gradient(-45deg, $grad-0 0%, $grad-50 50%, $grad-100 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(-45deg, $grad-0 0%, $grad-50 50%, $grad-100 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(135deg, $grad-0 0%, $grad-50 50%, $grad-100 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-}
-
-
-/*
-@mixin threeWayGradient($degree, $degreeInverse, $startColor, $positionOne, $middleColor, $positionTwo ,$endColor, $positionThree){
-    background: $startColor; // Old browsers
-    background: -moz-linear-gradient($degreeInverse, $startColor, $positionOne, $middleColor, $positionTwo ,$endColor, $positionThree); // FF3.6-15
-    background: -webkit-linear-gradient($degreeInverse, $startColor, $positionOne, $middleColor, $positionTwo ,$endColor, $positionThree); // Chrome10-25,Safari5.1-6
-    background: linear-gradient($degree, $startColor, $positionOne, $middleColor, $positionTwo ,$endColor, $positionThree); // W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+
-}
-div {
     @include threeWayGradient(135, 45, $grad-0, 0, $grad-50, 50, $grad-100, 100);
 }
-//background: linear-gradient(135deg, $grad-0 0%, $grad-50 50%, $grad-100 100%);
-*/
-
 
 .landing {
     min-height: calc(100vh - 56px);
@@ -135,6 +116,10 @@ div {
 .bio {
     min-height: 100vh;
     .split{
+        &__right, &__left{
+            min-height: 35vh;
+            margin-bottom: 4em;
+        }
         &__right{
             .image--fill{
                 max-width: 100%;
@@ -144,13 +129,56 @@ div {
                     margin-left: auto;
                     margin-right: 0;
                     height: 100%;
-                    opacity: 0.6;
+                    opacity: 0.3;
                     background-position: center;
                     background-size: cover;
                     background-repeat: no-repeat;
                 }
             }
         }
+    }
+}
+
+.album{
+    min-height: 100vh;
+    .split{
+        &__right, &__left{
+            min-height: 35vh;
+            margin-bottom: 4em;
+        }
+        &__left{
+            .image--fill{
+                max-width: 100%;
+                max-height: 60%;
+                .image--fill__img{
+                    background-image: $albumOne-image;
+                    margin-left: auto;
+                    margin-right: 0;
+                    height: 100%;
+                    opacity: 0.3;
+                    background-position: center;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                }
+            }
+        }
+        &__right{
+            &__button{
+                border: 0;
+                padding: 1em 1.5em;
+            }
+        }
+    }
+}
+
+.bttn{
+    &--dark{
+        background-color: $bttn--dark;
+        color: $light;
+    }
+    &--light{
+        background-color: $bttn--dark;
+        color: $dark;
     }
 }
 

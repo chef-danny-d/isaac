@@ -112,6 +112,44 @@
       </div>
     </section>
 
+    <section class="dark split album col-md-12 col-sm-12 row">
+      <div class="row col-md-12 justify-content-center title">
+        <h3 class="title--light">ALBUMS</h3>
+      </div>
+      <div class="row col-md-12 justify-content-center divider">
+        <p class="divider__title">
+          <a href="#" class="divider--title__link" id="albumOne">
+            <span class="divider--title__light">Album 1</span>
+          </a>
+        </p>
+        <p class="divider__line"></p>
+        <p class="divider__title">
+          <a href="#" class="divider--title__link" id="albumTwo">
+            <span class="divider--title__light">Album 2</span>
+          </a>
+        </p>
+        <p class="divider__line"></p>
+        <p class="divider__title">
+          <a href="#" class="divider--title__link" id="albumThree">
+            <span class="divider--title__light">Album 3</span>
+          </a>
+        </p>
+      </div>
+      <div data-scroll="toggle(.fromLeftIn, .fromLeftOut)" class="split__left col-md-6 col-sm-12">
+        <div class="image--fill overlay">
+          <div class="image--fill__img" value="placeholder image until real one is provided by client"></div>
+        </div>
+      </div>
+      <div data-scroll="toggle(.fromRightIn, .fromRightOut)" class="split__right col-md-6 col-sm-12">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed purus efficitur, sodales enim non, porta orci.
+          Nullam rhoncus nulla sed ullamcorper ornare. Maecenas a diam vulputate dolor commodo ultrices bibendum scelerisque
+          nisi. Proin feugiat ante in felis pellentesque aliquam. Aliquam viverra cursus porttitor. Nunc varius fringilla
+          erat, nec feugiat ex interdum sed. Quisque mollis felis at consequat pharetra.</p>
+        <button class="split__right__button col-lg-4 bttn--dark">BUY ON AMAZON</button>
+        <button class="split__right__button col-lg-4 bttn--dark">BUY ON iTUNES</button>
+      </div>
+    </section>
+
   </div>
 
 
@@ -148,7 +186,9 @@
     });
   </script>
   <script>
-    feather.replace({'stroke-width': 1})
+    feather.replace({
+      'stroke-width': 1
+    })
   </script>
 </body>
 

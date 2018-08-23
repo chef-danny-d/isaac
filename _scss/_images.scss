@@ -1,1 +1,5 @@
-$bio-image: url('../img/finn-gross-maurer-466340-unsplash.png');
+$random-image: 'https://picsum.photos/1920/1080/?random';
+$bio-image: url($random-image);
+$albumOne-image: url($random-image);
+$albumTwo-image: url($random-image);
+$albumThree-image: url($random-image);
