@@ -1,6 +1,7 @@
 //your own js files and scripts will come here as you write them throughout the project
 
  //core data that would act as blog posts
+ /*
  blog = [
      {
          title: "Blog post video",
@@ -88,9 +89,9 @@
  }
 
  document.getElementById("output").innerHTML = `
-Number of items: ${blog.length}<br/>
-${blog.map(display).join('')}
-`;
+    Number of items: ${blog.length}<br/>
+    ${blog.map(display).join('')}
+    `;
 
 function newPost(){
     //var d = new Date().getMonth();
@@ -100,3 +101,49 @@ function newPost(){
 function readMore(){
     //if {blog.length >= 5 than show button} else {hide}
 }
+
+
+$( document ).ready(function() {
+    $('#all').addClass('photos__filter__list__item--active');
+    $( "#all" ).click(function() {
+        if ($('#all').hasClass('photos__filter__list__item--active')){
+            $('#all').removeClass('photos__filter__list__item--active');
+        }
+        else{
+            $('#all').addClass('photos__filter__list__item--active');
+        }
+    });
+    $( "#2018" ).click(function() {
+        if ($('#2018').hasClass('photos__filter__list__item--active')){
+            $('#2018').removeClass('photos__filter__list__item--active');
+        }
+        else{
+            $('#2018').addClass('photos__filter__list__item--active');
+        }
+    });
+    $( "#2017" ).click(function() {
+        if ($('#2017').hasClass('photos__filter__list__item--active')){
+            $('#2017').removeClass('photos__filter__list__item--active');
+        }
+        else{
+            $('#2017').addClass('photos__filter__list__item--active');
+        }
+    });
+    $( "#2016" ).click(function() {
+        if ($('#2016').hasClass('photos__filter__list__item--active')){
+            $('#2016').removeClass('photos__filter__list__item--active');
+        }
+        else{
+            $('#2016').addClass('photos__filter__list__item--active');
+        }
+    });
+    $( "#2015" ).click(function() {
+        if ($('#2015').hasClass('photos__filter__list__item--active')){
+            $('#2015').removeClass('photos__filter__list__item--active');
+        }
+        else{
+            $('#2015').addClass('photos__filter__list__item--active');
+        }
+    });
+
+});*/

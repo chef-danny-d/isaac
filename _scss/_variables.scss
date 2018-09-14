@@ -11,41 +11,41 @@ $light:rgba(254, 254, 254, 1); //#fefefe
 $grad-0: rgba(226,226,226,1);
 $grad-50: rgba(190,181,165,1);
 $grad-100: rgba(100,91,78,1);
-$bttn--dark: rgba(193,175,150,1);
-:root {
-    --blue: #007bff;
-    --indigo: #6610f2;
-    --purple: #6f42c1;
-    --pink: #e83e8c;
-    --red: #dc3545;
-    --orange: #fd7e14;
-    --yellow: #ffc107;
-    --green: #28a745;
-    --teal: #20c997;
-    --cyan: #17a2b8;
-    --white: #fff;
-    --gray: #6c757d;
-    --gray-dark: #252424;
-    --primary: #007bff;
-    --secondary: #6c757d;
-    --success: #28a745;
-    --info: #17a2b8;
-    --warning: #ffc107;
-    --danger: #dc3545;
-    --light: #f8f9fa;
-    --dark: #2e2b2c;
-    --breakpoint-xs: 0;
-    --breakpoint-sm: 576px;
-    --breakpoint-md: 768px;
-    --breakpoint-lg: 992px;
-    --breakpoint-xl: 1200px;
-    --font-family-sans-serif: Lato;
-}
+$bttn--light: rgba(193,175,150,1);//#C1AF96
+$bttn--dark: rgba(103, 97, 92, 1);
+
 @mixin threeWayGradient($degree, $degreeInverse, $startColor, $positionOne, $middleColor, $positionTwo ,$endColor, $positionThree){
     background: $startColor; // Old browsers
     background: -moz-linear-gradient($degreeInverse, $startColor, $positionOne, $middleColor, $positionTwo ,$endColor, $positionThree); // FF3.6-15
     background: -webkit-linear-gradient($degreeInverse, $startColor, $positionOne, $middleColor, $positionTwo ,$endColor, $positionThree); // Chrome10-25,Safari5.1-6
     background: linear-gradient($degree, $startColor, $positionOne, $middleColor, $positionTwo ,$endColor, $positionThree); // W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+
+}
+
+@mixin widthChange($b, $m, $e) {
+    @keyframes widthAni{
+        0%{
+            width: $b;
+        }
+        25%{
+            width: $m;
+        }
+        100%{
+            width: $e;
+        }
+    }
+}
+@mixin widthChangeRev($b, $m, $e) {
+    @keyframes widthAniRev{
+        0%{
+            width: $e;
+        }
+        25%{
+            width: $m;
+        }
+        100%{
+            width: $b;
+        }
+    }
 }
 
 //fonts

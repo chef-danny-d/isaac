@@ -4,4 +4,18 @@
             font-size: 325%;
         }
     }
+    .photos{
+        height: 370vh;
+        max-height: 400vh;
+        &__grid{
+                &__img {
+                height: calc(100% - 15px);
+                &--img--double{
+                    .photos__grid__img--overlay{
+                        height: calc(100% - 15px);
+                    }
+                }
+            }
+        }
+    }
 }
