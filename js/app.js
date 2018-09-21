@@ -1,149 +1,89 @@
-//your own js files and scripts will come here as you write them throughout the project
+let title = 0, subTitle = 0, author = 0, date = 0, type = 0, n = 0, description = 0, article = 0, imageSrc = 0;
+let blog = [
+    {
+        "title" : "Blog post video",
+        "subTitle" : "This is the blog's subtitle",
+        "author" : "Me",
+        "date" : {
+            "year" : 2018,
+            "month" : 10,
+            "day" : 19
+        },
+        "type" : "video",
+        "new" : false,
+        "description" : "some txt",
+        "article" : "main text for blog post",
+        "imageSrc" : "url to any image that needs to be added to the blog post"
+    },
+    {
+        "title" : "Blog post video",
+        "subTitle" : "og's subtitle",
+        "author" : "you",
+        date : {
+            year : 2011,
+            "month" : 10,
+            "day" : 19
+        },
+        "type" : "video",
+        "new" : false,
+        "description" : "se txt",
+        "article" : "main text for blog post",
+        "imageSrc" : "url to age that needs to be added to the blog post"
+    },
+    {
+        "title" : "Blog post video",
+        "subTitle" : "This is t's subtitle",
+        "author" : "you",
+        "date" : {
+            "year" : 2015,
+            "month" : 10,
+            "day" : 19
+        },
+        "type" : "vdeo",
+        "new" : false,
+        "description" : "soxt",
+        "article" : "main text r blog post",
+        "imageSrc" : "url to any  that needs to be added to the blog post"
+    },
+    {
+        "title" : "Blog pideo",
+        "subTitle" : "This is the blog's subtitle",
+        "author" : "yo",
+        "date" : {
+            "year" : 2009,
+            "month" : 10,
+            "day" : 19
+        },
+        "type" : "vio",
+        "new" : false,
+        "description" : "somtxt",
+        "article" : "main text for blog ost",
+        "imageSrc" : "url to ange that needs to  to the blog post"
+    }
+];
 
- //core data that would act as blog posts
- /*
- blog = [
-     {
-         title: "Blog post video",
-         subTitle: "This is the blog's subtitle",
-         author: "Me",
-         dateYear: 2017,
-         dateMonth: 08,
-         dateDay: 12,
-         type: "video",
-         new: false,
-         description: "some txt",
-         article: "main text for blog post",
-         imageSrc: "url to any image that needs to be added to the blog post"
-     },
-     {
-         title: "Blog post music",
-         subTitle: "This is the blog's subtitle",
-         author: "John Smith",
-         dateYear: 2017,
-         dateMonth: 03,
-         dateDay: 08,
-         type: "music",
-         new: true,
-         description: "some txt",
-         article: "main text for blog post",
-         imageSrc: "url to any image that needs to be added to the blog post"
-     },
-     {
-         title: "Blog post text",
-         subTitle: "This is the blog's subtitle",
-         author: "Hack Man",
-         dateYear: 2017,
-         dateMonth: 10,
-         dateDay: 24,
-         type: "text",
-         new: false,
-         description: "some txt",
-         article: "main text for blog post",
-         imageSrc: "url to any image that needs to be added to the blog post"
-     },
-     {
-         title: "Blog post picture",
-         subTitle: "This is the blog's subtitle",
-         author: "Pac Man",
-         dateYear: 2017,
-         dateMonth: 12,
-         dateDay: 31,
-         type: "picture",
-         new: false,
-         description: "some txt",
-         article: "main text for blog post",
-         imageSrc: "url to any image that needs to be added to the blog post"
-     }
- ];
+//alert(blog[0].date.day)
 
- //supposed to test class adding functionality and comparing post.type -> basic static strings
- function typeClass(type) {
-     if (type === "video") {
-         return type
-         console.log("video");
-     } else if (type == "picture") {
-         return type
-         console.log("picture");
-     } else if (type == "text") {
-         return type
-         console.log("text");
-     } else {
-         return type
-         console.log("music");
-     }
- }
+    for(i = 0; i < 4; i++){
+        title +="<br>" +  blog[i].title + "<br>";
+        subTitle +="<br>" +  blog[i].subTitle + "<br>";
+        author +="<br>" +  blog[i].author + "<br>";
+        date +="<br>" +  blog[i].date.year + "<br>";
+        date +="<br>" +  blog[i].date.month + "<br>";
+        date +="<br>" +  blog[i].date.day + "<br>";
+        type +="<br>" +  blog[i].type + "<br>";
+        n +="<br>" +  blog[i].new + "<br>";
+        description +="<br>" +  blog[i].description + "<br>";
+        article +="<br>" +  blog[i].article + "<br>";
+        imageSrc +="<br>" +  blog[i].imageSrc + "<br>" + "<br>" + "<br>" + "<br>" + "<br>";
+    } 
 
- //displays all the blog post data imported from blog[array]
- function display(post) {
-     return `
-    <div>
-        <img src="https://via.placeholder.com/350x150">
-        <h2>${post.title}</h2>
-        <h3>${post.subTitle}</h3>
-        <h4>Author: ${post.author}</h4>
-        <h5>Created: ${post.date}</h5>
-        <h6>${typeClass(post.type)}</h6>
-    </div>
-    `
- }
-
- document.getElementById("output").innerHTML = `
-    Number of items: ${blog.length}<br/>
-    ${blog.map(display).join('')}
-    `;
-
-function newPost(){
-    //var d = new Date().getMonth();
-    //if post date == d {label == true} else {label == false}
-}
-
-function readMore(){
-    //if {blog.length >= 5 than show button} else {hide}
-}
-
-
-$( document ).ready(function() {
-    $('#all').addClass('photos__filter__list__item--active');
-    $( "#all" ).click(function() {
-        if ($('#all').hasClass('photos__filter__list__item--active')){
-            $('#all').removeClass('photos__filter__list__item--active');
-        }
-        else{
-            $('#all').addClass('photos__filter__list__item--active');
-        }
-    });
-    $( "#2018" ).click(function() {
-        if ($('#2018').hasClass('photos__filter__list__item--active')){
-            $('#2018').removeClass('photos__filter__list__item--active');
-        }
-        else{
-            $('#2018').addClass('photos__filter__list__item--active');
-        }
-    });
-    $( "#2017" ).click(function() {
-        if ($('#2017').hasClass('photos__filter__list__item--active')){
-            $('#2017').removeClass('photos__filter__list__item--active');
-        }
-        else{
-            $('#2017').addClass('photos__filter__list__item--active');
-        }
-    });
-    $( "#2016" ).click(function() {
-        if ($('#2016').hasClass('photos__filter__list__item--active')){
-            $('#2016').removeClass('photos__filter__list__item--active');
-        }
-        else{
-            $('#2016').addClass('photos__filter__list__item--active');
-        }
-    });
-    $( "#2015" ).click(function() {
-        if ($('#2015').hasClass('photos__filter__list__item--active')){
-            $('#2015').removeClass('photos__filter__list__item--active');
-        }
-        else{
-            $('#2015').addClass('photos__filter__list__item--active');
-        }
-    });
-
-});*/
+document.getElementById("title").innerHTML = title;
+document.getElementById("subTitle").innerHTML = subTitle;
+document.getElementById("author").innerHTML = author;
+//document.getElementById("demo").innerHTML = date + date + date;
+document.getElementById("type").innerHTML = type;
+document.getElementById("n").innerHTML = n;
+document.getElementById("desc").innerHTML = description;
+document.getElementById("article").innerHTML = article;
+document.getElementById("imageSrc").innerHTML = imageSrc;
