@@ -27,16 +27,17 @@ body {
             }
         }
 
-        &-nav {
+        &-nav{
             &:first-child {
+                font-size: 1.25em;
                 .nav-item {
-                    padding-right: 0;
+                    padding-right: 1em;
                 }
             }
         }
     }
 
-    &-link {
+    &-link:not(.social) {
         color: $light;
         text-transform: uppercase;
         font-family: $secondary-font-family;
@@ -51,7 +52,7 @@ body {
             }
         }
 
-        &::after {
+        &::after{
             display: none;
             transition: 1s ease display;
             width: 100%;
@@ -59,12 +60,19 @@ body {
             content: ' ';
         }
     }
+    
+    &-link.social{
+        color: $light;
+        &:hover{
+            color: $light;
+        }
+    }
 
     &-item {
         padding-right: 2.5em;
 
         &.active {
-            .nav-link {
+            .nav-link:not(.social) {
                 &::after {
                     display: block;
                     height: 0.075em;
