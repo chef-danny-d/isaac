@@ -1,24 +1,62 @@
 {
-  "firstName": "John",
-  "lastName": "Smith",
-  "age": 25,
-  "address": {
-    "streetAddress": "21 2nd Street",
-    "city": "New York",
-    "state": "NY",
-    "postalCode": "10021"
-  },
-  "phoneNumber": [
-    {
-      "type": "home",
-      "number": "212 555-1234"
+    "blog1": {
+        "title": "Blog post video 1",
+        "subTitle": "This is the blog's subtitle",
+        "author": "Me",
+        "date": {
+            "year": 2018,
+            "month": 10,
+            "day": 19
+        },
+        "type": "video 1",
+        "new": true,
+        "description": "some txt",
+        "article": "main text for blog post",
+        "imageSrc": "url to any image that needs to be added to the blog post"
     },
-    {
-      "type": "fax",
-      "number": "646 555-4567"
+    "blog2": {
+        "title": "Blog post vido 2",
+        "subTitle": "og's subtitle",
+        "author": "you",
+        "date": {
+            "year": "2011",
+            "month": "10",
+            "day": 19
+        },
+        "type": "video 2",
+        "new": false,
+        "description": "se txt",
+        "article": "main text for blog post",
+        "imageSrc": "url to age that needs to be added to the blog post"
+    },
+    "blog3": {
+        "title": "Blog post videoooo 3",
+        "subTitle": "This is t's subtitle",
+        "author": "you",
+        "date": {
+            "year": 2015,
+            "month": 10,
+            "day": 19
+        },
+        "type": "vdeo 3",
+        "new": true,
+        "description": "soxt",
+        "article": "main text r blog post",
+        "imageSrc": "url to any  that needs to be added to the blog post"
+    },
+    "blog4": {
+        "title": "Blog pideo 4",
+        "subTitle": "This is the blog's subtitle",
+        "author": "yo",
+        "date": {
+            "year": 2009,
+            "month": 10,
+            "day": 19
+        },
+        "type": "vio 4",
+        "new": false,
+        "description": "somtxt",
+        "article": "main text for blog ost",
+        "imageSrc": "url to ange that needs to  to the blog post"
     }
-  ],
-  "gender":{
-    "type":"male"
-  }
 }
