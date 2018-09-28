@@ -1,6 +1,9 @@
 // @ts-check
 import $ from "jquery";
 
+//https://api.myjson.com/bins/1eskf4 actual data
+//https://api.myjson.com/bins/t6qvk test data
+
 const y = 4; //number of posts to be published
 let i;
 let title, subTitle, author, date, type, n, description, article, imageSrc, newPost, oldPost;
@@ -106,7 +109,25 @@ for (i = 0; i < y; i++) {
     display("imageSrc", imageSrc)
 }
 
+//SERVER LOAD TESTING
 
 $(document).ready(function () {
     $(".photos__filter__list__item").toggleClass("photos__filter__list__item--active");
+    
+    
+    //url to the json that we are hosting
+    //this will change to either a static link once we host or just refference my github raw file
+    var jsonURL = "https://api.myjson.com/bins/1eskf4";
+    $.getJSON(jsonURL, function(loadData){
+        
+        //loading a var with what we need dispalyed
+        //this needs to be changed into somehting more dynamic maybe with a loop of somekind
+        let dataString = loadData.blog1.title;
+        
+        //actually displaying the data using innerHTML into the title1 id div
+        //this is just to test if everything works
+        //the end result will be done using jQuery like the local test above
+        document.getElementById("title1").innerHTML = dataString;
+    
+    })
 });
