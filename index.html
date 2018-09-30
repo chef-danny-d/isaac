@@ -10,7 +10,8 @@
   <link rel="stylesheet" href="css_lib/bootstrap.css">
   <link rel="stylesheet" href="css_lib/animate.min.css">
   <script src="https://unpkg.com/feather-icons"></script>
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+    crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.min.css">
 
   <title>ISAAC THOMAS</title>
@@ -52,31 +53,31 @@
       </ul>
       <ul class="navbar-nav">
         <li class="nav-item active">
-          <a class="nav-link" href="#">home
+          <a class="nav-link" id="homeTrigger" href="#home">home
             <span class="sr-only">(current)</span>
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">bio</a>
+          <a class="nav-link" href="#bio">bio</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">albums</a>
+          <a class="nav-link" id="albumsTrigger" href="#album">albums</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">photos</a>
+          <a class="nav-link" href="#photos">photos</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">news</a>
+          <a class="nav-link" href="#news">news</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">contact</a>
+          <a class="nav-link" href="#contact">contact</a>
         </li>
       </ul>
     </div>
   </nav>
 
   <div>
-    <section class="dark landing offset-md-3 col-md-6 col-sm-12 ">
+    <section class="dark landing offset-md-3 col-md-6 col-sm-12" id="home">
       <div class="landing--center ">
         <div class="row justify-content-center animated fadeInDown fast">
           <h1 class="text-center landing--maintext">ISAAC THOMAS</h1>
@@ -90,7 +91,7 @@
       </div>
     </section>
 
-    <section class="light split bio col-md-12 col-sm-12 row">
+    <section class="light split bio col-md-12 col-sm-12 row" id="bio">
       <div class="row col-md-12 justify-content-center title">
         <h3 class="title--dark">BIO</h3>
       </div>
@@ -128,7 +129,7 @@
       </div>
     </section>
 
-    <section class="dark split album col-md-12 col-sm-12 row">
+    <section class="dark split album col-md-12 col-sm-12 row" id="album">
       <div class="row col-md-12 justify-content-center title">
         <h3 class="title--light">ALBUMS</h3>
       </div>
@@ -175,17 +176,17 @@
       </div>
     </section>
 
-    <section class="light photos col-md-12 col-sm-12 row">
+    <section class="light photos col-md-12 col-sm-12 row" id="photos">
       <div class="row col-md-12 justify-content-center title">
         <h3 class="title--dark">PHOTOS</h3>
       </div>
       <div class="col-md-2 col-sm-12 photos__filter">
         <ul class="photos__filter__list">
           <li id="all" class="photos__filter__list__item photos__filter__list__item--active">
-            <a href="#"class="photos__filter__list__item__link dark--text">Show all photos</a>
+            <a href="#" class="photos__filter__list__item__link dark--text">Show all photos</a>
           </li>
-          <li id="2018"  class="photos__filter__list__item">
-            <a href="#"class="photos__filter__list__item__link dark--text">2018</a>
+          <li id="2018" class="photos__filter__list__item">
+            <a href="#" class="photos__filter__list__item__link dark--text">2018</a>
           </li>
           <li id="2017" class="photos__filter__list__item">
             <a href="#" class="photos__filter__list__item__link dark--text">2017</a>
@@ -262,15 +263,80 @@
         </div><!-- / .row -->
       </div>
     </section>
-    <section class="dark split news col-md-12 col-sm-12 row">
+
+    <section class="dark split news col-md-12 col-sm-12 row" id="news">
       <div class="row col-md-12 justify-content-center title">
         <h3 class="title--light">NEWS</h3>
       </div>
-    </section>
-    <section class="light split contact col-md-12 col-sm-12 row">
-      <div class="row col-md-12 justify-content-center title">
-        <h3 class="title--dark">contact</h3>
+
+      <div data-scroll="toggle(.fromLeftIn, .fromLeftOut)" class="split__left col-md-5 col-sm-12">
+        <div class="image--fill overlay" id="newsImg">
+          <!-- where the append news image comes in from app.ts -->
+        </div>
       </div>
+      <div data-scroll="toggle(.fromRightIn, .fromRightOut)" class="split__right offset-md-1 col-md-6 col-sm-12 blog">
+        <!-- where the append news section comes in from app.ts -->
+      </div>
+
+    </section>
+    <section class="light split contact col-md-12 col-sm-12 row" id="contact">
+      <div class="row col-md-12 justify-content-center title">
+        <h3 class="title--dark justify-content-center">contact</h3>
+      </div>
+
+      <div data-scroll="toggle(.fromLeftIn, .fromLeftOut)" class="split__left col-md-6 col-sm-12 booking">
+        <h4 class="booking--subtitle">bookings</h4>
+        <div class="book col-md-7 col-sm-12">
+          <div class="location">FedEx Field</div>
+          <div class="event">oct 12, 2018</div>
+          <button class="bttn--dark bttn">book now</button>
+          <div class="social">
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-twitter"></i>
+          </div>
+        </div>
+        <div class="book col-md-7 col-sm-12">
+          <div class="location">MetLife Stadium</div>
+          <div class="event">Jan 3, 2019</div>
+          <button class="bttn--dark bttn">sold out</button>
+          <div class="social">
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-twitter"></i>
+          </div>
+        </div>
+        <div class="book col-md-7 col-sm-12">
+          <div class="location">Arlington Stadium</div>
+          <div class="event">Mar 30, 2019</div>
+          <button class="bttn--dark bttn">book now</button>
+          <div class="social">
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-twitter"></i>
+          </div>
+        </div>
+        <div class="book col-md-7 col-sm-12">
+          <div class="location">AirBnB Stadium</div>
+          <div class="event">Jul 10, 2019</div>
+          <button class="bttn--dark bttn">sold out</button>
+          <div class="social">
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-twitter"></i>
+          </div>
+        </div>
+      </div>
+
+      <div data-scroll="toggle(.fromRightIn, .fromRightOut)" class="split__right col-md-6 col-sm-12 form">
+        <h4 class="form--subtitle justify-content-center">Send an email</h4>
+        <form class="form__wrap" action="https://formspree.io/papp.dany77@icloud.com" method="POST">
+          <input class="form__wrap__item" type="text" name="name" placeholder="Full Name" />
+          <input class="form__wrap__item" type="text" name="_subject" placeholder="Subject" />
+          <input class="form__wrap__item" type="email" name="_replyto" placeholder="Your Email" />
+          <textarea class="form__wrap__item form__wrap__item--textarea" type="text" name="message" placeholder="Message"></textarea>
+          <button class="bttn bttn--dark" type="submit" value="submit">submit</button>
+          <input class="form__wrap__item" type="hidden" name="_next" value="index.html" />
+          <input class="form__wrap__item" type="text" name="_gotcha" style="display:none" />
+        </form>
+      </div>
+
     </section>
     <section class="dark split footer col-md-12 col-sm-12 row"></section>
   </div>
@@ -304,6 +370,17 @@
   <script src="js_lib/ScrollTrigger.min.js"></script>
   <!-- Optional JavaScript -->
   <script src="js/app.js" charset="utf-8"></script>
+  <script type="module">
+    import jump from './node_modules/jump.js/dist/jump.module.js';
+    
+    let albums = document.getElementById("albumsTrigger");
+
+    albums.addEventListener('click', () =>{
+      jump('.albums')
+    })
+
+
+  </script>
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       var trigger = new ScrollTrigger();

@@ -7,6 +7,7 @@
     "dist": "surge ."
   },
   "devDependencies": {
+    "@types/jquery": "^3.3.10",
     "grunt": "^0.4.5",
     "grunt-autoprefixer": "^3.0.4",
     "grunt-contrib-concat": "^0.4.0",
@@ -22,6 +23,7 @@
     "cssnano": "^3.10.0",
     "git-script": "^0.5.0",
     "grunt-ts": "^1.12.1",
+    "jump.js": "^1.0.2",
     "pixrem": "^4.0.1"
   },
   "repository": {

@@ -1,0 +1,8 @@
+@media only screen and (max-width: 992px){
+    .navbar-nav{
+        &.mr-auto{
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+    }
+}
