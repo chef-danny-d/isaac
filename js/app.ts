@@ -1,7 +1,6 @@
 // @ts-check
 
-//https://api.myjson.com/bins/1eskf4 actual data
-//https://api.myjson.com/bins/t6qvk test data
+//https://api.myjson.com/bins/s7vh4 actual data
 
 let title:string, subTitle:string, author:string, date:string, type:string, n:boolean, description:string, article:string, imageSrc:string, i:number, dateMonth;
 let obj:string, ending:string; //turning doc.innerHTML into fn
@@ -260,5 +259,24 @@ $(document).ready(function () {
         document.getElementById("title1").innerHTML = dataString;
     
     })
+    
+    
+    // CODEPEN EDIT
+    
+    let url = "https://api.myjson.com/bins/s7vh4";
+    $.ajax({
+    url: url,
+    dataType: 'json',
+    type: 'get',
+    cache: false,
+    success: function(data){
+      $(data.news).each(function(index, value) {
+        for(let i = 0; i < 5; i++){
+          document.getElementById("demo").innerHTML = value.blog1.title;
+        }
+        //
+      });
+    }
+    });
 */
 });
