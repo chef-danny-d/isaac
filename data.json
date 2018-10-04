@@ -1,0 +1,198 @@
+{
+  "news": {
+    "blog": [
+      {
+        "title": "Blog post video 1",
+        "subTitle": "This is the blog's subtitle",
+        "author": "Me",
+        "date": {
+          "year": 2018,
+          "month": 10,
+          "day": 19
+        },
+        "type": "video 1",
+        "new": true,
+        "description": "some txt",
+        "article": "main text for blog post",
+        "imageSrc": "url to any image that needs to be added to the blog post"
+      },
+      {
+        "title": "Blog post vido 2",
+        "subTitle": "og's subtitle",
+        "author": "you",
+        "date": {
+          "year": "2011",
+          "month": "10",
+          "day": 19
+        },
+        "type": "video 2",
+        "new": false,
+        "description": "se txt",
+        "article": "main text for blog post",
+        "imageSrc": "url to age that needs to be added to the blog post"
+      },
+      {
+        "title": "Blog post videoooo 3",
+        "subTitle": "This is t's subtitle",
+        "author": "you",
+        "date": {
+          "year": 2015,
+          "month": 10,
+          "day": 19
+        },
+        "type": "vdeo 3",
+        "new": true,
+        "description": "soxt",
+        "article": "main text r blog post",
+        "imageSrc": "url to any  that needs to be added to the blog post"
+      },
+      {
+        "title": "Blog pideo 4",
+        "subTitle": "This is the blog's subtitle",
+        "author": "yo",
+        "date": {
+          "year": 2009,
+          "month": 10,
+          "day": 19
+        },
+        "type": "vio 4",
+        "new": false,
+        "description": "somtxt",
+        "article": "main text for blog ost",
+        "imageSrc": "url to ange that needs to  to the blog post"
+      },
+      {
+        "title": "Blog pideo 5",
+        "subTitle": "This is the blog's subtitle",
+        "author": "yo",
+        "date": {
+          "year": 2009,
+          "month": 10,
+          "day": 19
+        },
+        "type": "vio 4",
+        "new": false,
+        "description": "somtxt",
+        "article": "main text for blog ost",
+        "imageSrc": "url to ange that needs to  to the blog post"
+      },
+      {
+        "title": "Blog pideo 6",
+        "subTitle": "This is the blog's subtitle",
+        "author": "yo",
+        "date": {
+          "year": 2009,
+          "month": 10,
+          "day": 19
+        },
+        "type": "vio 4",
+        "new": false,
+        "description": "somtxt",
+        "article": "main text for blog ost",
+        "imageSrc": "url to ange that needs to  to the blog post"
+      },
+      {
+        "title": "Blog pideo 7",
+        "subTitle": "This is the blog's subtitle",
+        "author": "yo",
+        "date": {
+          "year": 2009,
+          "month": 10,
+          "day": 19
+        },
+        "type": "vio 4",
+        "new": false,
+        "description": "somtxt",
+        "article": "main text for blog ost",
+        "imageSrc": "url to ange that needs to  to the blog post"
+      },
+      {
+        "title": "Blog pideo 8",
+        "subTitle": "This is the blog's subtitle",
+        "author": "yo",
+        "date": {
+          "year": 2009,
+          "month": 10,
+          "day": 19
+        },
+        "type": "vio 4",
+        "new": false,
+        "description": "somtxt",
+        "article": "main text for blog ost",
+        "imageSrc": "url to ange that needs to  to the blog post"
+      }
+    ]
+  },
+  "album": [
+    {
+      "title": "Album 1 title",
+      "desc": "This is an album",
+      "amazon": "www.amazon.com",
+      "youtube": "www.youtube.com",
+      "itunes": "www.apple.com",
+      "date": {
+        "year": 2009,
+        "month": 10,
+        "day": 19
+      }
+    },
+    {
+      "title": "Album 2 title",
+      "desc": "This is another album",
+      "amazon": "www.amazon.com",
+      "youtube": "www.youtube.com",
+      "itunes": "www.apple.com",
+      "date": {
+        "year": 2012,
+        "month": 8,
+        "day": 7
+      }
+    },
+    {
+      "title": "Album 3 title",
+      "desc": "This is yet another album",
+      "amazon": "www.amazon.com",
+      "youtube": "www.youtube.com",
+      "itunes": "www.apple.com",
+      "date": {
+        "year": 2015,
+        "month": 12,
+        "day": 1
+      }
+    }
+  ],
+  "event": [
+    {
+      "location": "FedEx Field",
+      "date": {
+        "year": 2018,
+        "day": 12,
+        "month": "Oct"
+      }
+    },
+    {
+      "location": "MetLife Stadium",
+      "date": {
+        "year": 2019,
+        "day": 3,
+        "month": "Jan"
+      }
+    },
+    {
+      "location": "Arlington Stadium",
+      "date": {
+        "year": 2019,
+        "day": 30,
+        "month": "Mar"
+      }
+    },
+    {
+      "location": "AirBnB Stadium",
+      "date": {
+        "year": 2019,
+        "day": 10,
+        "month": "Jul"
+      }
+    }
+  ]
+}
