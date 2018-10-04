@@ -1,113 +1,22 @@
-// @ts-check
+const y: number = 6; //number of posts to be published
+const jsonURL: string = "https://api.myjson.com/bins/jue5o";
+//SERVER TESTING
 
-//https://api.myjson.com/bins/s7vh4 actual data
+let req = new XMLHttpRequest();
+req.open('GET', jsonURL);
+req.onload = function(){
+    let title: string, subTitle: string, author: string, date: string, type: string, n: boolean, description: string, article: string, imageSrc: string, i: number, dateMonth;
+    let obj: string, ending: string; //turning doc.innerHTML into fn
 
-let title:string, subTitle:string, author:string, date:string, type:string, n:boolean, description:string, article:string, imageSrc:string, i:number, dateMonth;
-let obj:string, ending:string; //turning doc.innerHTML into fn
-let blog = [
-    {
-        title: "Lorem ipsum dolor sit ametasdiokdhaiadas",
-        subTitle: "This is the blog's subtitle",
-        author: "Me",
-        date: {
-            year: 2017,
-            month: 10,
-            day: 19
-        },
-        type: "blog",
-        new: true,
-        description: "some txt",
-        article: "main text for blog post",
-        imageSrc: "https://picsum.photos/1920/1080/?image=122"
-    },
-    {
-        title: "Lorem ipsum dolor sit amet",
-        subTitle: "This is the blog's subtitle",
-        author: "Me",
-        date: {
-            year: 2017,
-            month: 10,
-            day: 19
-        },
-        type: "blog",
-        new: true,
-        description: "some txt",
-        article: "main text for blog post",
-        imageSrc: "https://picsum.photos/1920/1080/?random"
-    },
-    {
-        title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        subTitle: "This is the blog's subtitle",
-        author: "Me",
-        date: {
-            year: 2018,
-            month: 4,
-            day: 19
-        },
-        type: "blog",
-        new: true,
-        description: "some txt",
-        article: "main text for blog post",
-        imageSrc: "https://picsum.photos/1920/1080/?image=52"
-    },
-    {
-        title: "Donec id convallis dolor. Cras fringilla fermentum sem.",
-        subTitle: "og's subtitle",
-        author: "you",
-        date: {
-            year: 2011,
-            month: 3,
-            day: 19
-        },
-        type: "video",
-        new: true,
-        description: "se txt",
-        article: "main text for blog post",
-        imageSrc: "https://picsum.photos/1920/1080/?image=62"
-    },
-    {
-        title: "In vitae tempus tortor. Sed pulvinar orci mauris.",
-        subTitle: "This is t's subtitle",
-        author: "you",
-        date: {
-            year: 2015,
-            month: 2,
-            day: 19
-        },
-        type: "blog",
-        new: true,
-        description: "soxt",
-        article: "main text r blog post",
-        imageSrc: "https://picsum.photos/1920/1080/?image=27"
-    },
-    {
-        title: "Cras placerat faucibus tortor, sit amet consequat quam convallis vitae.",
-        subTitle: "This is the blog's subtitle",
-        author: "yo",
-        date: {
-            year: 2009,
-            month: 1,
-            day: 19
-        },
-        type: "music",
-        new: true,
-        description: "somtxt",
-        article: "main text for blog ost",
-        imageSrc: "https://picsum.photos/1920/1080/?image=32"
-    }
-];
-
-$("#newsImg").append(`<div class="image--fill__img" value="placeholder image until real one is provided by client"></div>`);
-
-//declaring a function to do all the displaying so we get rid of long redundent code
-//var obj is the HTML class
-//var ending is the var that includes our JSON extraction
-//the bellow fn is equliant of:         let display = (obj, ending) => document.getElementById(obj + [i]).innerHTML = ending;
-let display = (obj, ending) => $(`.${obj}` + [i]).html(ending);
-
-const y:number = 6; //number of posts to be published
-
-for (i = 0; i < y; i++) {
+  
+  
+  //declaring a function to do all the displaying so we get rid of long redundent code
+  //var obj is the HTML class
+  //var ending is the var that includes our JSON extraction
+  let display = (obj, ending) => $("." + obj).append(ending);
+  
+  let serverData = JSON.parse(req.responseText);
+  for(let i = 0; i <  y; i++){
     $(".blog").append(`
     <div class="block${i} animated fadeInRight faster delay-${i}s">
         <div class="divider"></div>
@@ -116,167 +25,120 @@ for (i = 0; i < y; i++) {
         <div class="title${i}"></div>
     </div>
     `);
-
     $(".block0").addClass("current");
-
-    if(i >= 5){
+    if (i >= 5) {
         $(".blog").append(`
         <button class="bttn bttn--light">See more posts</button>
         `)
     }
-
-    title = blog[i].title;
-    display("title", title);
-
-    subTitle = blog[i].subTitle;
-    display("subTitle", subTitle);
-
-    author = blog[i].author;
-    display("author", author);
-
-    dateMonth = blog[i].date.month;
-    if(dateMonth == 1){
-        dateMonth = blog[i].date.month.toString();
+    
+    //get and display title
+    title = serverData.news.blog[i].title;
+    //$(".title" + i).append(title);
+    display("title" + i, title);
+  
+    //get and display subtitle
+    subTitle = serverData.news.blog[i].subTitle;
+    display("subTitle" + i, subTitle);
+  
+    //get and display author
+    author = serverData.news.blog[i].author;
+    display("author" + i, author);
+    
+    dateMonth = serverData.news.blog[i].date.month;
+    if (dateMonth == 1) {
+        dateMonth = serverData.news.blog[i].date.month.toString();
         dateMonth = "Jan"
-        date = dateMonth + " " + blog[i].date.year;
-    }
-    else if(dateMonth == 2){
-        dateMonth = blog[i].date.month.toString();
+        date = dateMonth + " " + serverData.news.blog[i].date.year;
+    } else if (dateMonth == 2) {
+        dateMonth = serverData.news.blog[i].date.month.toString();
         dateMonth = "Feb";
-        date = dateMonth + " " + blog[i].date.year;
-    }
-    else if(blog[i].date.month == 3){
-        dateMonth = blog[i].date.month.toString();
+        date = dateMonth + " " + serverData.news.blog[i].date.year;
+    } else if (serverData.news.blog[i].date.month == 3) {
+        dateMonth = serverData.news.blog[i].date.month.toString();
         dateMonth = "Mar";
-        date = dateMonth + " " + blog[i].date.year;
-    }
-    else if(blog[i].date.month == 4){
-        dateMonth = blog[i].date.month.toString();
+        date = dateMonth + " " + serverData.news.blog[i].date.year;
+    } else if (serverData.news.blog[i].date.month == 4) {
+        dateMonth = serverData.news.blog[i].date.month.toString();
         dateMonth = "Apr";
-        date = dateMonth + " " + blog[i].date.year;
-    }
-    else if(blog[i].date.month == 5){
-        dateMonth = blog[i].date.month.toString();
+        date = dateMonth + " " + serverData.news.blog[i].date.year;
+    } else if (serverData.news.blog[i].date.month == 5) {
+        dateMonth = serverData.news.blog[i].date.month.toString();
         dateMonth = "May";
-        date = dateMonth + " " + blog[i].date.year;
-    }
-    else if(blog[i].date.month == 6){
-        dateMonth = blog[i].date.month.toString();
+        date = dateMonth + " " + serverData.news.blog[i].date.year;
+    } else if (serverData.news.blog[i].date.month == 6) {
+        dateMonth = serverData.news.blog[i].date.month.toString();
         dateMonth = "jun";
-        date = dateMonth + " " + blog[i].date.year;
-    }
-    else if(blog[i].date.month == 7){
-        dateMonth = blog[i].date.month.toString();
+        date = dateMonth + " " + serverData.news.blog[i].date.year;
+    } else if (serverData.news.blog[i].date.month == 7) {
+        dateMonth = serverData.news.blog[i].date.month.toString();
         dateMonth = "jul";
-        date = dateMonth + " " + blog[i].date.year;
-    }
-    else if(blog[i].date.month == 8){
-        dateMonth = blog[i].date.month.toString();
+        date = dateMonth + " " + serverData.news.blog[i].date.year;
+    } else if (serverData.news.blog[i].date.month == 8) {
+        dateMonth = serverData.news.blog[i].date.month.toString();
         dateMonth = "aug";
-        date = dateMonth + " " + blog[i].date.year;
-    }
-    else if(blog[i].date.month == 9){
-        dateMonth = blog[i].date.month.toString();
+        date = dateMonth + " " + serverData.news.blog[i].date.year;
+    } else if (serverData.news.blog[i].date.month == 9) {
+        dateMonth = serverData.news.blog[i].date.month.toString();
         dateMonth = "sep";
-        date = dateMonth + " " + blog[i].date.year;
-    }
-    else if(blog[i].date.month == 10){
-        dateMonth = blog[i].date.month.toString();
+        date = dateMonth + " " + serverData.news.blog[i].date.year;
+    } else if (serverData.news.blog[i].date.month == 10) {
+        dateMonth = serverData.news.blog[i].date.month.toString();
         dateMonth = "oct";
-        date = dateMonth + " " + blog[i].date.year;
-    }   
-    else if(blog[i].date.month == 11){
-        dateMonth = blog[i].date.month.toString();
+        date = dateMonth + " " + serverData.news.blog[i].date.year;
+    } else if (serverData.news.blog[i].date.month == 11) {
+        dateMonth = serverData.news.blog[i].date.month.toString();
         dateMonth = "nov";
-        date = dateMonth + " " + blog[i].date.year;
-    }
-    else if(blog[i].date.month == 12){
-        dateMonth = blog[i].date.month.toString();
+        date = dateMonth + " " + serverData.news.blog[i].date.year;
+    } else if (serverData.news.blog[i].date.month == 12) {
+        dateMonth = serverData.news.blog[i].date.month.toString();
         dateMonth = "dec";
-        date = dateMonth + " " + blog[i].date.year;
+        date = dateMonth + " " + serverData.news.blog[i].date.year;
+    } else {
+        serverData.news.blog[i].date.month == null;
     }
-    else{
-        blog[i].date.month == null;
+  
+    //display date
+    display("date" + i, date);
+    
+    //get post type
+    type = serverData.news.blog[i].type;
+    
+    //get post new bool
+    n = serverData.news.blog[i].new;
+
+
+    if (serverData.news.blog[0].new == false) {
+        serverData.news.blog[0].new = true;
     }
-    display("date", date);
-
-
-
-
-    type = blog[i].type;
-    n = blog[i].new;
-
-
-    if(blog[0].new == false){
-        blog[0].new = true;
-    }
-    for(let x:number = 1; x < y;x++){
-        if(blog[x].new == true){
-            blog[x].new = false;
+    for (let x: number = 1; x < y; x++) {
+        if (serverData.news.blog[x].new == true) {
+            serverData.news.blog[x].new = false;
         }
     }
 
     //tri if statement  
     //if key new has value true display n in ".n"
     //else display type in ".type"
-    (blog[i].new == true) ? display("label", "new"): display("label", type);
-
-    description =blog[i].description;
-    display("desc", description);
-
-    article =blog[i].article;
-    display("article", article);
-
-    imageSrc =blog[i].imageSrc;
-    display("imageSrc", imageSrc)
-}
-
-
-$(".image--fill__img").css("background-image","url('" + blog[0].imageSrc + "')");
-console.log(i);
-
-
-//SERVER LOAD TESTING
-
-$(document).ready(function () {
-    //$(".photos__filter__list__item").toggleClass("photos__filter__list__item--active");
+    (serverData.news.blog[i].new == true) ? display("label" + i, "new"): display("label" + i, type);
+  
+    
+    //get and display description
+    description = serverData.news.blog[i].description;
+    display("desc" + i, description);
+    
+    //get and display article
+    article = serverData.news.blog[i].article;
+    display("article" + i, article);
     
     
+    //get imgsrc
+    imageSrc = serverData.news.blog[i].imageSrc;
+    //display src
+    $(".image--fill__img").css("background-image", "url('" + serverData.news.blog[0].imageSrc + "')");
+  }
+};
+req.send();
 
-/*    
-    //url to the json that we are hosting
-    //this will change to either a static link once we host or just refference my github raw file
-    var jsonURL = "https://api.myjson.com/bins/1eskf4";
-    $.getJSON(jsonURL, function(loadData){
-        
-        //loading a var with what we need dispalyed
-        //this needs to be changed into somehting more dynamic maybe with a loop of somekind
-        let dataString = loadData.blog1.title;
-        
-        //actually displaying the data using innerHTML into the title1 id div
-        //this is just to test if everything works
-        //the end result will be done using jQuery like the local test above
-        document.getElementById("title1").innerHTML = dataString;
-    
-    })
-    
-    
-    // CODEPEN EDIT
-    
-    let url = "https://api.myjson.com/bins/s7vh4";
-    $.ajax({
-    url: url,
-    dataType: 'json',
-    type: 'get',
-    cache: false,
-    success: function(data){
-      $(data.news).each(function(index, value) {
-        for(let i = 0; i < 5; i++){
-          document.getElementById("demo").innerHTML = value.blog1.title;
-        }
-        //
-      });
-    }
-    });
-*/
-});
+
+//SERVER TESTING END
