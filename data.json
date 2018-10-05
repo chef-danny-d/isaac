@@ -126,7 +126,7 @@
   "album": [
     {
       "title": "Album 1 title",
-      "desc": "This is an album",
+      "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed purus efficitur, sodales enim non, porta orci. Nullam rhoncus nulla sed ullamcorper ornare. Maecena a diam vulputate dolor commodo ultrices bibendum scelerisque nisi. Proin feugiat ante in felis pellentesque aliquam. Aliquam viverra cursus porttitor. Nunc varius fringilla erat, nec feugiat ex interdum sed. Quisque mollis felis at consequat pharetra.",
       "amazon": "www.amazon.com",
       "youtube": "www.youtube.com",
       "itunes": "www.apple.com",
@@ -138,7 +138,7 @@
     },
     {
       "title": "Album 2 title",
-      "desc": "This is another album",
+      "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed purus efficitur, sodales enim non, porta orci. Nullam rhoncus nulla sed ullamcorper ornare. Maecena a diam vulputate dolor commodo ultrices bibendum scelerisque nisi. Proin feugiat ante in felis pellentesque aliquam. Aliquam viverra cursus porttitor. Nunc varius fringilla erat, nec feugiat ex interdum sed. Quisque mollis felis at consequat pharetra.",
       "amazon": "www.amazon.com",
       "youtube": "www.youtube.com",
       "itunes": "www.apple.com",
@@ -150,7 +150,7 @@
     },
     {
       "title": "Album 3 title",
-      "desc": "This is yet another album",
+      "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed purus efficitur, sodales enim non, porta orci. Nullam rhoncus nulla sed ullamcorper ornare. Maecena a diam vulputate dolor commodo ultrices bibendum scelerisque nisi. Proin feugiat ante in felis pellentesque aliquam. Aliquam viverra cursus porttitor. Nunc varius fringilla erat, nec feugiat ex interdum sed. Quisque mollis felis at consequat pharetra.",
       "amazon": "www.amazon.com",
       "youtube": "www.youtube.com",
       "itunes": "www.apple.com",
