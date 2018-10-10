@@ -125,40 +125,69 @@
   },
   "album": [
     {
-      "title": "Album 1 title",
+      "title": "Nocturnes: The Strings Sessions",
       "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed purus efficitur, sodales enim non, porta orci. Nullam rhoncus nulla sed ullamcorper ornare. Maecena a diam vulputate dolor commodo ultrices bibendum scelerisque nisi. Proin feugiat ante in felis pellentesque aliquam. Aliquam viverra cursus porttitor. Nunc varius fringilla erat, nec feugiat ex interdum sed. Quisque mollis felis at consequat pharetra.",
-      "amazon": "www.amazon.com",
-      "youtube": "www.youtube.com",
-      "itunes": "www.apple.com",
+      "amazon": "https://www.amazon.com/Nocturnes-Thomas-Stowehaven-String-Quartet/dp/B07GTDYJ4S/ref=sr_1_1?s=dmusic&ie=UTF8&qid=1538775501&sr=1-1-mp3-albums-bar-strip-0&keywords=Isaac%20Thomas%20%26%20The%20Stowehaven%20String%20Quartet",
+      "youtube": "https://www.youtube.com/watch?v=S22JPcNCk0A&list=PLqYbLHxJMjsAMpIg-gP81uXt7l-Qol-Mf",
+      "itunes": null,
       "date": {
-        "year": 2009,
-        "month": 10,
-        "day": 19
-      }
+        "year": 2018,
+        "month": 8,
+        "day": 21
+      },
+      "cover": "http://isaac-portfolio.surge.sh/img/43134854_252927875410629_5872549573125210112_n.jpg"
     },
     {
-      "title": "Album 2 title",
+      "title": "Wonderful Peace",
       "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed purus efficitur, sodales enim non, porta orci. Nullam rhoncus nulla sed ullamcorper ornare. Maecena a diam vulputate dolor commodo ultrices bibendum scelerisque nisi. Proin feugiat ante in felis pellentesque aliquam. Aliquam viverra cursus porttitor. Nunc varius fringilla erat, nec feugiat ex interdum sed. Quisque mollis felis at consequat pharetra.",
       "amazon": "www.amazon.com",
-      "youtube": "www.youtube.com",
+      "youtube": null,
       "itunes": "www.apple.com",
       "date": {
         "year": 2012,
         "month": 8,
         "day": 7
-      }
+      },
+      "cover": "http://isaac-portfolio.surge.sh/img/43182029_718754405146625_8432523087118860288_n.jpg"
     },
     {
-      "title": "Album 3 title",
+      "title": "Nightfall on stillwater",
       "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed purus efficitur, sodales enim non, porta orci. Nullam rhoncus nulla sed ullamcorper ornare. Maecena a diam vulputate dolor commodo ultrices bibendum scelerisque nisi. Proin feugiat ante in felis pellentesque aliquam. Aliquam viverra cursus porttitor. Nunc varius fringilla erat, nec feugiat ex interdum sed. Quisque mollis felis at consequat pharetra.",
       "amazon": "www.amazon.com",
       "youtube": "www.youtube.com",
-      "itunes": "www.apple.com",
+      "itunes": null,
       "date": {
         "year": 2015,
         "month": 12,
         "day": 1
-      }
+      },
+      "cover": "http://isaac-portfolio.surge.sh/img/43220098_2189498781372465_237714031673081856_n.jpg"
+    },
+    {
+      "title": "Album 4 title",
+      "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed purus efficitur, sodales enim non, porta orci. Nullam rhoncus nulla sed ullamcorper ornare. Maecena a diam vulputate dolor commodo ultrices bibendum scelerisque nisi. Proin feugiat ante in felis pellentesque aliquam. Aliquam viverra cursus porttitor. Nunc varius fringilla erat, nec feugiat ex interdum sed. Quisque mollis felis at consequat pharetra.",
+      "amazon": "www.amazon.com",
+      "youtube": "www.youtube.com",
+      "itunes": null,
+      "date": {
+        "year": 2015,
+        "month": 12,
+        "day": 1
+      },
+      "cover": "https://picsum.photos/1920/1080/?image=57"
+    },
+    {
+      "title": "Album 5 title",
+      "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed purus efficitur, sodales enim non, porta orci. Nullam rhoncus nulla sed ullamcorper ornare. Maecena a diam vulputate dolor commodo ultrices bibendum scelerisque nisi. Proin feugiat ante in felis pellentesque aliquam. Aliquam viverra cursus porttitor. Nunc varius fringilla erat, nec feugiat ex interdum sed. Quisque mollis felis at consequat pharetra.",
+      "amazon": "www.amazon.com",
+      "youtube": "www.youtube.com",
+      "itunes": null,
+      "date": {
+        "year": 2015,
+        "month": 12,
+        "day": 1
+      },
+      "cover": "https://picsum.photos/1920/1080/?image=90"
     }
   ],
   "event": [

@@ -1,5 +1,5 @@
 var y = 6; //number of posts to be published
-var jsonURL = "https://api.myjson.com/bins/su93w";
+var jsonURL = "https://api.myjson.com/bins/tn258";
 //SERVER TESTING
 var req = new XMLHttpRequest();
 req.open('GET', jsonURL);
@@ -115,11 +115,10 @@ req.onload = function () {
         //get and display article
         article = serverData.news.blog[i_1].article;
         display("article" + i_1, article);
-        //get imgsrc
+        //get blog post imgsrc
         imageSrc = serverData.news.blog[i_1].imageSrc;
-        //display src
-        console.log(imageSrc);
-        $(".image--fill__img").css("background-image", "url('" + serverData.news.blog[0].imageSrc + "')");
+        //display album img
+        $("#newsImg").css("background-image", "url('" + serverData.news.blog[0].imageSrc + "')");
     } //end of for loop
     //need to make the albums dynamic
     //set up skeleton or append via TS
@@ -127,6 +126,7 @@ req.onload = function () {
     $(".albumContent__title").append(serverData.album[0].title);
     $(".albumContent__date--year").append(serverData.album[0].date.year);
     $(".albumContent__desc").append(serverData.album[0].desc);
+    $(".albumContent__img").css("background-image", "url('" + serverData.album[0].cover + "')");
 };
 req.send();
-//SERVER TESTING END
+//END OF SESSION
