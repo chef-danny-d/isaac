@@ -14,11 +14,12 @@ $grad-100: rgba(100,91,78,1);
 $bttn--light: rgba(193,175,150,1);//#C1AF96
 $bttn--dark: rgba(103, 97, 92, 1);
 
-@mixin threeWayGradient($degree, $degreeInverse, $startColor, $positionOne, $middleColor, $positionTwo ,$endColor, $positionThree){
+@mixin threeWayGradient($startColor, $middleColor, $endColor){
     background: $startColor; // Old browsers
-    background: -moz-linear-gradient($degreeInverse, $startColor, $positionOne, $middleColor, $positionTwo ,$endColor, $positionThree); // FF3.6-15
-    background: -webkit-linear-gradient($degreeInverse, $startColor, $positionOne, $middleColor, $positionTwo ,$endColor, $positionThree); // Chrome10-25,Safari5.1-6
-    background: linear-gradient($degree, $startColor, $positionOne, $middleColor, $positionTwo ,$endColor, $positionThree); // W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+
+    background: -webkit-gradient(linear, left top, left bottom, from($startColor), color-stop($middleColor) ,to($endColor)); 
+    background: -webkit-linear-gradient($startColor, $middleColor , $endColor);
+    background: -o-linear-gradient($startColor, $middleColor , $endColor);
+    background: linear-gradient($startColor, $middleColor , $endColor);
 }
 
 @mixin widthChange($b, $m, $e) {
