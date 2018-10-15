@@ -3,11 +3,11 @@ $bio-image: url('http://isaac-portfolio.surge.sh/img/43153036_1011484379036015_2
 $albumTwo-image: url($random-image);
 $albumThree-image: url($random-image);
 
-$photos-1: url('http://isaac-portfolio.surge.sh/img/12963542_10101794232979774_6745863043556240946_n.jpg');
-$photos-2: url('http://isaac-portfolio.surge.sh/img/43178751_1143232542501746_9105189676628574208_n.jpg');
-$photos-3: url('http://isaac-portfolio.surge.sh/img/43280906_173171810261615_2987722350817968128_n.jpg');
-$photos-4: url('http://isaac-portfolio.surge.sh/img/36483905_10103096048396244_4685805248307003392_o.jpg');
-$photos-5: url('http://isaac-portfolio.surge.sh/img/43166183_542913219482368_2759204329456926720_n.jpg');
-$photos-6: url('http://isaac-portfolio.surge.sh/img/43293060_702231116828204_4005413369841451008_n.jpg');
-$photos-7: url('http://isaac-portfolio.surge.sh/img/43155773_2208888119140126_6102610050386231296_n.jpg');
-$photos-8: url('http://isaac-portfolio.surge.sh/img/43162593_475898969584466_1316447737247432704_n.jpg');
+$photos:( url('http://isaac-portfolio.surge.sh/img/12963542_10101794232979774_6745863043556240946_n.jpg'),
+ url('http://isaac-portfolio.surge.sh/img/43178751_1143232542501746_9105189676628574208_n.jpg'),
+ url('http://isaac-portfolio.surge.sh/img/43280906_173171810261615_2987722350817968128_n.jpg'),
+ url('http://isaac-portfolio.surge.sh/img/36483905_10103096048396244_4685805248307003392_o.jpg'),
+ url('http://isaac-portfolio.surge.sh/img/43166183_542913219482368_2759204329456926720_n.jpg'),
+ url('http://isaac-portfolio.surge.sh/img/43293060_702231116828204_4005413369841451008_n.jpg'),
+ url('http://isaac-portfolio.surge.sh/img/43155773_2208888119140126_6102610050386231296_n.jpg'),
+ url('http://isaac-portfolio.surge.sh/img/43162593_475898969584466_1316447737247432704_n.jpg'));
