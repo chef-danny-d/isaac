@@ -368,54 +368,14 @@ section {
                 margin: 15px 0px;
                 overflow: hidden;
 
-                &#pic1{
-                    background-repeat: no-repeat;
-                    background-position: center center;
-                    background-size: cover;
-                    background-image: $photos-1;
-                }
-                &#pic2{
-                    background-repeat: no-repeat;
-                    background-position: center center;
-                    background-size: cover;
-                    background-image: $photos-2;
-                }
-                &#pic3{
-                    background-repeat: no-repeat;
-                    background-position: center center;
-                    background-size: cover;
-                    background-image: $photos-3;
-                }
-                &#pic4{
-                    background-repeat: no-repeat;
-                    background-position: center center;
-                    background-size: cover;
-                    background-image: $photos-4;
-                }
-                &#pic5{
-                    background-repeat: no-repeat;
-                    background-position: center center;
-                    background-size: cover;
-                    background-image: $photos-5;
-                }
-                &#pic6{
-                    background-repeat: no-repeat;
-                    background-position: center center;
-                    background-size: cover;
-                    background-image: $photos-6;
-                }
-                &#pic7{
-                    background-repeat: no-repeat;
-                    background-position: center center;
-                    background-size: cover;
-                    background-image: $photos-7;
-                }
-                &#pic8{
-                    background-repeat: no-repeat;
-                    background-position: center center;
-                    background-size: cover;
-                    background-image: $photos-8;
-                }
+				@for $i from 1 through 8{
+					&#pic#{$i} {
+						background-repeat: no-repeat; 
+						background-position: center center; 
+						background-size: cover; 
+						background-image: nth($photos, $i);
+					}
+				}
             }
 
             &--img--double {
