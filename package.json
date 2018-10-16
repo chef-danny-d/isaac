@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "Isaac Personal Portfolio",
   "main": "index.js",
-  "scripts": {
-    "dist": "surge ."
-  },
   "devDependencies": {
     "@types/jquery": "^3.3.10",
     "grunt": "^1.0.3",
@@ -21,7 +18,6 @@
   "dependencies": {
     "autoprefixer": "^8.6.5",
     "cssnano": "^3.10.0",
-    "git-script": "^0.5.0",
     "grunt-ts": "^1.12.1",
     "jump.js": "^1.0.2",
     "pixrem": "^4.0.1"
@@ -30,7 +26,7 @@
     "type": "git",
     "url": "git+https://github.com/chef-danny-d/isaac.git"
   },
-  "author": "",
+  "author": "Daniel B. Papp",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/chef-danny-d/isaac/issues"

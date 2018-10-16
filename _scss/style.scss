@@ -43,23 +43,23 @@ body {
         text-transform: uppercase;
         font-family: $secondary-font-family;
 
+        &::after {
+            display: block;
+            transition: 0.75s ease all;
+            width: 0%;
+            height: 0.075em;
+            content: ' ';
+        }
+
         &:hover {
             color: $light;
 
             &::after {
-                display: block;
+                width: 100%;
                 background-color: $light;
-                transition: 1s ease display;
+                transition: 0.75s ease all;
             }
-        }
-
-        &::after {
-            display: none;
-            transition: 1s ease display;
-            width: 100%;
-            height: 0.075em;
-            content: ' ';
-        }
+        } 
     }
 
     &-link.social {
@@ -159,7 +159,7 @@ section {
             margin-bottom: 4em;
         }
 
-        &__left{
+        &__left {
             justify-content: center;
             align-content: space-evenly;
             display: flex;
@@ -202,7 +202,7 @@ section {
                 max-width: 100%;
                 max-height: 60%;
 
-                &.overlay{
+                &.overlay {
                     position: relative;
                 }
 
@@ -368,14 +368,14 @@ section {
                 margin: 15px 0px;
                 overflow: hidden;
 
-				@for $i from 1 through 8{
-					&#pic#{$i} {
-						background-repeat: no-repeat; 
-						background-position: center center; 
-						background-size: cover; 
-						background-image: nth($photos, $i);
-					}
-				}
+                @for $i from 1 through 8 {
+                    &#pic#{$i} {
+                        background-repeat: no-repeat;
+                        background-position: center center;
+                        background-size: cover;
+                        background-image: nth($photos, $i);
+                    }
+                }
             }
 
             &--img--double {
@@ -404,6 +404,7 @@ section {
             justify-content: center;
             align-items: center;
             display: flex;
+
             .image--fill {
                 max-width: 100%;
                 max-height: 60%;
@@ -422,18 +423,6 @@ section {
 
         &__right.blog {
             overflow: hidden;
-            .current{
-                .divider{
-                    &::before{
-                        content: '';
-                        display: block;
-                        height: 2em;
-                        width: 0.25em;
-                        background-color: #fefefe;
-                        margin-left: -0.25em;
-                    }
-                }
-            }
             @for $i from 0 through 5 {
                 .block#{$i} {
                     padding-top: 3em;
@@ -481,6 +470,7 @@ section {
                 border: 0;
                 padding: 0.5em 2.5em;
                 margin-bottom: 0.5em;
+
                 &--light {
                     text-transform: uppercase;
                 }
@@ -491,13 +481,15 @@ section {
 
 .contact {
     min-height: 100vh;
+
     &__right,
     &__left {
         min-height: 35vh;
         margin-bottom: 4em;
     }
-    .booking{
-        &--subtitle{
+
+    .booking {
+        &--subtitle {
             color: $dark--title;
             font-weight: 100;
             letter-spacing: 0.15em;
@@ -505,28 +497,34 @@ section {
             text-align: center;
             padding-bottom: 3em;
         }
-        .book{
+
+        .book {
             position: relative;
             margin-bottom: 2.5em;
-            .location{
+
+            .location {
                 font-size: 1.25em;
             }
-            .event{
+
+            .event {
                 text-transform: uppercase;
                 letter-spacing: 0.125em;
                 padding-bottom: 0.5em;
             }
-            .bttn{
+
+            .bttn {
                 text-transform: uppercase;
                 min-width: 40%;
             }
-            .social{
+
+            .social {
                 font-size: 1.25em;
                 float: right;
                 margin-right: 5em;
                 display: flex;
                 margin-top: -.25em;
-                .fab{
+
+                .fab {
                     padding: 0em 0.75em;
                     border-radius: 50%;
                     box-shadow: inset 0px 2.5em $bttn--dark;
@@ -538,12 +536,20 @@ section {
                     align-items: center;
                     flex-direction: column;
                     margin-left: 1em;
+                    transition: all 0.25s ease;
+                    cursor: pointer;
+                    &:hover{
+                        transition: all 0.25s ease;
+                        box-shadow: inset 0px 2.5em $bttn--light;
+                        color: $bttn--dark;
+                    }
                 }
             }
         }
     }
-    .form{
-        &--subtitle{
+
+    .form {
+        &--subtitle {
             color: $dark;
             font-weight: 100;
             letter-spacing: 0.15em;
@@ -551,33 +557,39 @@ section {
             text-align: center;
             padding-bottom: 3em;
         }
-        &__wrap{
+
+        &__wrap {
             display: flex;
             flex-direction: column;
             align-items: center;
-            &__item{
+
+            &__item {
                 width: 80%;
                 margin: 2em 1em;
                 border: none;
                 background: transparent;
-                color: $light;
+                color: $dark;
                 box-shadow: 0px 1px $dark;
                 padding-bottom: 0.25em;
-                transition: 0.5s ease box-shadow;
-                &--textarea{
+                transition: 0.75s ease all;
+
+                &--textarea {
                     resize: vertical;
                     scroll-behavior: smooth;
                 }
-                &::placeholder{
+
+                &::placeholder {
                     color: $dark
                 }
-                &:focus{
+
+                &:focus {
                     outline: 0;
                     box-shadow: 0px 2.5px $dark;
-                    transition: 0.5s ease box-shadow;
+                    transition: 0.75s ease all;
                 }
             }
-            .bttn{
+
+            .bttn {
                 text-transform: uppercase;
                 font-weight: bold;
                 width: 50%;
@@ -595,11 +607,25 @@ section {
     &--dark {
         background-color: $bttn--dark;
         color: $bttn--light;
+        transition: all 0.25s ease;
+        cursor: pointer;
+        &:hover{
+            background-color: $grad-50;
+            color: $bttn--dark;
+            transition: all 0.25s ease;
+        }
     }
 
     &--light {
         background-color: $bttn--light;
         color: $dark;
+        transition: all 0.25s ease;
+        cursor: pointer;
+        &:hover{
+            background-color: $bttn--dark;
+            color: $bttn--light;
+            transition: all 0.25s ease;
+        }
     }
 }
 
