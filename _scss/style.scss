@@ -67,6 +67,13 @@ body {
 
         &:hover {
             color: $light;
+
+            background: rgb(2,0,36);
+            background: linear-gradient(180deg, rgba(2,0,36,.4) 0%,
+            rgba(9,9,121,0.9339717576483718) 69%);
+            // rgba(0,212,255,0.47458800414697133) 100%);
+
+            border-radius: 50% 50%;
         }
     }
 
