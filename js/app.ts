@@ -1,5 +1,5 @@
 const y: number = 6; //number of posts to be published
-const jsonURL: string = "https://api.myjson.com/bins/tn258";
+const jsonURL: string = "https://api.myjson.com/bins/14z6co";
 //SERVER TESTING
 
 let req = new XMLHttpRequest();

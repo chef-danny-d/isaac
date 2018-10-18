@@ -1,5 +1,5 @@
 var y = 6; //number of posts to be published
-var jsonURL = "https://api.myjson.com/bins/tn258";
+var jsonURL = "https://api.myjson.com/bins/14z6co";
 //SERVER TESTING
 var req = new XMLHttpRequest();
 req.open('GET', jsonURL);

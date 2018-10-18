@@ -2,37 +2,37 @@
   "news": {
     "blog": [
       {
-        "title": "Blog post video 1",
+        "title": "Album re-run, Nocturnes: The Strings Sessions",
         "subTitle": "This is the blog's subtitle",
         "author": "Me",
         "date": {
           "year": 2018,
-          "month": 10,
-          "day": 19
+          "month": 8,
+          "day": 21
         },
-        "type": "video 1",
+        "type": "album",
         "new": true,
         "description": "some txt",
         "article": "main text for blog post",
-        "imageSrc": "https://picsum.photos/1920/1080/?image=52"
+        "imageSrc": "https://isaac-portfolio.surge.sh/img/43134854_252927875410629_5872549573125210112_n.jpg"
       },
       {
-        "title": "Blog post vido 2",
+        "title": "Fresh album: Nocturnes",
         "subTitle": "og's subtitle",
         "author": "you",
         "date": {
-          "year": "2011",
-          "month": "10",
+          "year": 2011,
+          "month": 10,
           "day": 19
         },
-        "type": "video 2",
+        "type": "new release",
         "new": false,
         "description": "se txt",
         "article": "main text for blog post",
-        "imageSrc": "https://picsum.photos/1920/1080/?image=125"
+        "imageSrc": "https://isaac-portfolio.surge.sh/img/43195849_2174479809506402_4041137099628347392_n.jpg"
       },
       {
-        "title": "Blog post videoooo 3",
+        "title": "Release of the new album: Lux Aeterna",
         "subTitle": "This is t's subtitle",
         "author": "you",
         "date": {
@@ -40,14 +40,14 @@
           "month": 10,
           "day": 19
         },
-        "type": "vdeo 3",
+        "type": "music",
         "new": true,
         "description": "soxt",
         "article": "main text r blog post",
-        "imageSrc": "https://picsum.photos/1920/1080/?image=178"
+        "imageSrc": "https://isaac-portfolio.surge.sh/img/43183220_315722235897305_3000739907065872384_n.jpg"
       },
       {
-        "title": "Blog pideo 4",
+        "title": "Out now: Wonderful Peace",
         "subTitle": "This is the blog's subtitle",
         "author": "yo",
         "date": {
@@ -55,14 +55,14 @@
           "month": 10,
           "day": 19
         },
-        "type": "vio 4",
+        "type": "album",
         "new": false,
         "description": "somtxt",
         "article": "main text for blog ost",
-        "imageSrc": "https://picsum.photos/1920/1080/?image=20"
+        "imageSrc": "https://isaac-portfolio.surge.sh/img/43182029_718754405146625_8432523087118860288_n.jpg"
       },
       {
-        "title": "Blog pideo 5",
+        "title": "Relax with my new album, The Sound is Beautiful Here, on repeat",
         "subTitle": "This is the blog's subtitle",
         "author": "yo",
         "date": {
@@ -70,14 +70,14 @@
           "month": 10,
           "day": 19
         },
-        "type": "vio 4",
+        "type": "album",
         "new": false,
         "description": "somtxt",
         "article": "main text for blog ost",
-        "imageSrc": "https://picsum.photos/1920/1080/?image=1"
+        "imageSrc": "https://isaac-portfolio.surge.sh/img/43222787_690421211322474_7997856123132575744_n.jpg"
       },
       {
-        "title": "Blog pideo 6",
+        "title": "Take a listen: Nightfall on Still Water",
         "subTitle": "This is the blog's subtitle",
         "author": "yo",
         "date": {
@@ -85,11 +85,11 @@
           "month": 10,
           "day": 19
         },
-        "type": "vio 4",
+        "type": "album",
         "new": false,
         "description": "somtxt",
         "article": "main text for blog ost",
-        "imageSrc": "https://picsum.photos/1920/1080/?image=50"
+        "imageSrc": "https://isaac-portfolio.surge.sh/img/43220098_2189498781372465_237714031673081856_n.jpg"
       },
       {
         "title": "Blog pideo 7",
@@ -100,26 +100,11 @@
           "month": 10,
           "day": 19
         },
-        "type": "vio 4",
+        "type": "album",
         "new": false,
         "description": "somtxt",
         "article": "main text for blog ost",
         "imageSrc": "https://picsum.photos/1920/1080/?image=87"
-      },
-      {
-        "title": "Blog pideo 8",
-        "subTitle": "This is the blog's subtitle",
-        "author": "yo",
-        "date": {
-          "year": 2009,
-          "month": 10,
-          "day": 19
-        },
-        "type": "vio 4",
-        "new": false,
-        "description": "somtxt",
-        "article": "main text for blog ost",
-        "imageSrc": "https://picsum.photos/1920/1080/?image=529"
       }
     ]
   },
@@ -135,7 +120,7 @@
         "month": 8,
         "day": 21
       },
-      "cover": "http://isaac-portfolio.surge.sh/img/43134854_252927875410629_5872549573125210112_n.jpg"
+      "cover": "https://isaac-portfolio.surge.sh/img/43134854_252927875410629_5872549573125210112_n.jpg"
     },
     {
       "title": "Wonderful Peace",
@@ -148,7 +133,7 @@
         "month": 8,
         "day": 7
       },
-      "cover": "http://isaac-portfolio.surge.sh/img/43182029_718754405146625_8432523087118860288_n.jpg"
+      "cover": "https://isaac-portfolio.surge.sh/img/43182029_718754405146625_8432523087118860288_n.jpg"
     },
     {
       "title": "Nightfall on stillwater",
@@ -161,7 +146,7 @@
         "month": 12,
         "day": 1
       },
-      "cover": "http://isaac-portfolio.surge.sh/img/43220098_2189498781372465_237714031673081856_n.jpg"
+      "cover": "https://isaac-portfolio.surge.sh/img/43220098_2189498781372465_237714031673081856_n.jpg"
     },
     {
       "title": "Album 4 title",
