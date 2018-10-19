@@ -68,12 +68,19 @@ body {
         &:hover {
             color: $light;
 
-            background: rgb(2,0,36);
-            background: linear-gradient(180deg, rgba(2,0,36,.4) 0%,
-            rgba(9,9,121,0.9339717576483718) 69%);
-            // rgba(0,212,255,0.47458800414697133) 100%);
-
+            // background: rgb(2,0,36);
+            // background: linear-gradient(180deg, rgba(2,0,36,.2) 0%,
+            // rgba(9,9,121,0.9339717576483718) 100%);
+            // // rgba(0,212,255,0.47458800414697133) 100%);
+            animation: iconCircle 800ms 100ms;
             border-radius: 50% 50%;
+
+            @keyframes iconCircle {
+                0% {background: linear-gradient(180deg, rgba(2,0,36,.2) 0%,
+                    rgba(9,9,121,0.9339717576483718) 100%);}
+                100% {background: linear-gradient(180deg, rgba(9,9,121,0.9339717576483718) 0%, rgba(2,0,36,.2)
+                     100%);}
+            }
         }
     }
 
