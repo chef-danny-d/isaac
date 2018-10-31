@@ -119,6 +119,20 @@ req.onload = function () {
         imageSrc = serverData.news.blog[i_1].imageSrc;
         //display album img
         $("#newsImg").css("background-image", "url('" + serverData.news.blog[0].imageSrc + "')");
+        var _loop_1 = function (z) {
+            $("div.block" + z).hover(function () {
+                //in
+                $("#newsImg").css("background-image", "url('" + serverData.news.blog[z].imageSrc + "')");
+                $("div.block" + z + " .divider").addClass("current");
+            }, function () {
+                //out
+                $("#newsImg").css("background-image", "url('" + serverData.news.blog[0].imageSrc + "')");
+                $("div.block" + z + " .divider").removeClass("current");
+            });
+        };
+        for (var z = 0; z < y; z++) {
+            _loop_1(z);
+        }
     } //end of for loop
     //need to make the albums dynamic
     //set up skeleton or append via TS
