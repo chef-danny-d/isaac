@@ -13,11 +13,11 @@ module.exports = function (grunt) {
                 task: 'ts'
             }
         },
-          ts: {
+        ts: {
             default: {
               src: ["js/*.ts"]
             }
-          },
+        },
         sass: {
             options:{
                     style:'compressed'
