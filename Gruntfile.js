@@ -7,7 +7,16 @@ module.exports = function (grunt) {
             css:{
                 files: '_scss/style.scss',
                 tasks: ['sass']
+            },
+            ts:{
+                files: '',
+                task: 'ts'
             }
+        },
+        ts: {
+          default : {
+            src: 'js/*.ts'
+          }
         },
         sass: {
             options:{
