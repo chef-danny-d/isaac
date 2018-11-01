@@ -9,15 +9,15 @@ module.exports = function (grunt) {
                 tasks: ['sass']
             },
             ts:{
-                files: '',
+                files: 'js/*.ts',
                 task: 'ts'
             }
         },
-        ts: {
-          default : {
-            src: 'js/*.ts'
-          }
-        },
+          ts: {
+            default: {
+              src: ["js/*.ts"]
+            }
+          },
         sass: {
             options:{
                     style:'compressed'
