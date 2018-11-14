@@ -7,15 +7,6 @@ module.exports = function (grunt) {
             css:{
                 files: '_scss/style.scss',
                 tasks: ['sass']
-            },
-            ts:{
-                files: 'js/*.ts',
-                tasks: ['ts']
-            }
-        },
-        ts: {
-            default: {
-              src: ["js/*.ts"]
             }
         },
         sass: {
@@ -50,5 +41,5 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-ts');
 
     // 3. Where we tell Grunt what to do when we type "grunt" into the terminal.
-    grunt.registerTask('default', ['sass' , 'ts']);
+    grunt.registerTask('default', ['sass']);
 };
