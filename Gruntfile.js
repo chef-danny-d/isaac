@@ -19,11 +19,17 @@ module.exports = function (grunt) {
                 }
             }
         },
-        autoprefixer:{
-            dist:{
-                files:{
-                    'build/style.css' : 'css/style.min.css'
-                }
+        postcss: {
+            options: {
+                map: true, // inline sourcemaps
+                processors: [
+                    require('pixrem')(), // add fallbacks for rem units
+                    require('autoprefixer')({browsers: 'last 4 versions'}), // add vendor prefixes
+                    //require('cssnano')() // minify the result //not needed rn since sass is already doing that 
+                ]
+            },
+            dist: {
+                src: 'css/style.min.css'
             }
         }
     });
@@ -31,7 +37,8 @@ module.exports = function (grunt) {
     // 2. Where we tell Grunt we plan to use this plug-in.
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-sass');
-    grunt.loadNpmTasks('grunt-autoprefixer');
+    grunt.loadNpmTasks('grunt-postcss');
+    grunt.loadNpmTasks('grunt-ts');
 
     // 3. Where we tell Grunt what to do when we type "grunt" into the terminal.
     grunt.registerTask('default', ['sass']);
