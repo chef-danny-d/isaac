@@ -236,6 +236,9 @@ section {
                 border: 0;
                 padding: 0.5em 2.5em;
                 margin-bottom: 0.5em;
+                display: inline-block;
+                color: $dark--title;
+                text-align: center;
             }
 
             .albumContent {

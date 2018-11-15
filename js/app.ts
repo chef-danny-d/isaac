@@ -137,29 +137,107 @@ req.onload = function () {
         //display album img
         $("#newsImg").css("background-image", "url('" + serverData.news.blog[0].imageSrc + "')");
 
-        for(let z:number = 0; z < y; z++){
-            $( `div.block${z}` ).hover(
-                function() {
+        for (let z: number = 0; z < y; z++) {
+            $(`div.block${z}`).hover(
+                function () {
                     //in
                     $("#newsImg").css("background-image", "url('" + serverData.news.blog[z].imageSrc + "')");
-                    $( `div.block${z} .divider`).addClass("current");
-                }, function() {
+                    $(`div.block${z} .divider`).addClass("current");
+                },
+                function () {
                     //out
                     $("#newsImg").css("background-image", "url('" + serverData.news.blog[0].imageSrc + "')");
-                    $( `div.block${z} .divider`).removeClass("current");
+                    $(`div.block${z} .divider`).removeClass("current");
                 }
             );
         }
 
-    }//end of for loop
-    
+    } //end of for loop
+
     //need to make the albums dynamic
-        //set up skeleton or append via TS
-        //on click slider to hide and show the album data for different albums
-    $(".albumContent__title").append(serverData.album[0].title);    
+    //set up skeleton or append via TS
+    //on click slider to hide and show the album data for different albums
+    for (let q: number = 0; q < 3; q++) {
+        $(`.albumContent__title--${q}`).append(serverData.album[q].title);
+
+    }
     $(".albumContent__date--year").append(serverData.album[0].date.year);
     $(".albumContent__desc").append(serverData.album[0].desc);
+    if (serverData.album[0].itunes !== null) {
+        $(".albumContent").append(`<a class="split__right__button offset-md-0 offset-lg-1 col-lg-4 bttn--light" id="btn__itunes" href="${serverData.album[0].itunes}" target="_blank">BUY ON iTUNES</a>`);
+    }
+    if (serverData.album[0].amazon !== null) {
+        $(".albumContent").append(`<a class="split__right__button offset-md-0 offset-lg-1 col-lg-4 bttn--light" id="btn__amazon" href="${serverData.album[0].amazon}" target="_blank">BUY ON AMAZON</a>`);
+    }
+    if (serverData.album[0].youtube !== null) {
+        $(".albumContent").append(`<a class="split__right__button offset-md-0 offset-lg-1 col-lg-4 bttn--light" id="btn__yt" href="${serverData.album[0].youtube}" target="_blank">LISTEN ON YOUTUBE</a>`);
+    }
     $(".albumContent__img").css("background-image", "url('" + serverData.album[0].cover + "')");
+
+
+
+    $(`#album0`).click(function () {
+        $(".albumContent__date--year").empty();
+        $(".albumContent__desc").empty();
+        $("#btn__itunes").remove();
+        $("#btn__amazon").remove();
+        $("#btn__yt").remove();
+        $(".albumContent__date--year").append(serverData.album[0].date.year);
+        $(".albumContent__desc").append(serverData.album[0].desc);
+        if (serverData.album[0].itunes !== null) {
+            $(".albumContent").append(`<a class="split__right__button offset-md-0 offset-lg-1 col-lg-4 bttn--light" id="btn__itunes" href="${serverData.album[0].itunes}" target="_blank">BUY ON iTUNES</a>`);
+        }
+        if (serverData.album[0].amazon !== null) {
+            $(".albumContent").append(`<a class="split__right__button offset-md-0 offset-lg-1 col-lg-4 bttn--light" id="btn__amazon" href="${serverData.album[0].amazon}" target="_blank">BUY ON AMAZON</a>`);
+        }
+        if (serverData.album[0].youtube !== null) {
+            $(".albumContent").append(`<a class="split__right__button offset-md-0 offset-lg-1 col-lg-4 bttn--light" id="btn__yt" href="${serverData.album[0].youtube}" target="_blank">LISTEN ON YOUTUBE</a>`);
+        }
+        $(".albumContent__img").css("background-image", "url('" + serverData.album[0].cover + "')");
+    });
+
+    $("#album1").click(function () {
+        $(".albumContent__date--year").empty();
+        $(".albumContent__desc").empty();
+        $("#btn__itunes").remove();
+        $("#btn__amazon").remove();
+        $("#btn__yt").remove();
+        $(".albumContent__date--year").append(serverData.album[1].date.year);
+        $(".albumContent__desc").append(serverData.album[1].desc);
+        if (serverData.album[1].itunes !== null) {
+            $(".albumContent").append(`<a class="split__right__button offset-md-0 offset-lg-1 col-lg-4 bttn--light" id="btn__itunes" href="${serverData.album[1].itunes}" target="_blank">BUY ON iTUNES</a>`);
+        }
+        if (serverData.album[1].amazon !== null) {
+            $(".albumContent").append(`<a class="split__right__button offset-md-0 offset-lg-1 col-lg-4 bttn--light" id="btn__amazon" href="${serverData.album[1].amazon}" target="_blank">BUY ON AMAZON</a>`);
+        }
+        if (serverData.album[1].youtube !== null) {
+            $(".albumContent").append(`<a class="split__right__button offset-md-0 offset-lg-1 col-lg-4 bttn--light" id="btn__yt" href="${serverData.album[1].youtube}" target="_blank">LISTEN ON YOUTUBE</a>`);
+        }
+        $(".albumContent__img").css("background-image", "url('" + serverData.album[1].cover + "')");
+    });
+
+    $("#album2").click(function () {
+        $(".albumContent__date--year").empty();
+        $(".albumContent__desc").empty();
+        $("#btn__itunes").remove();
+        $("#btn__amazon").remove();
+        $("#btn__yt").remove();
+        $(".albumContent__date--year").append(serverData.album[2].date.year);
+        $(".albumContent__desc").append(serverData.album[2].desc);
+        if (serverData.album[2].itunes !== null) {
+            $(".albumContent").append(`<a class="split__right__button offset-md-0 offset-lg-1 col-lg-4 bttn--light" id="btn__itunes" href="${serverData.album[2].itunes}" target="_blank">BUY ON iTUNES</a>`);
+        }
+        if (serverData.album[2].amazon !== null) {
+            $(".albumContent").append(`<a class="split__right__button offset-md-0 offset-lg-1 col-lg-4 bttn--light" id="btn__amazon" href="${serverData.album[2].amazon}" target="_blank">BUY ON AMAZON</a>`);
+        }
+        if (serverData.album[2].youtube !== null) {
+            $(".albumContent").append(`<a class="split__right__button offset-md-0 offset-lg-1 col-lg-4 bttn--light" id="btn__yt" href="${serverData.album[2].youtube}" target="_blank">LISTEN ON YOUTUBE</a>`);
+        }
+        $(".albumContent__img").css("background-image", "url('" + serverData.album[2].cover + "')");
+    });
+
+
+
 };
 
 
