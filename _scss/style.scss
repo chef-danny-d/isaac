@@ -72,12 +72,14 @@ body {
             // background: linear-gradient(180deg, rgba(2,0,36,.2) 0%,
             // rgba(9,9,121,0.9339717576483718) 100%);
             // // rgba(0,212,255,0.47458800414697133) 100%);
-            animation: iconCircle 1s ease-in-out 200ms;
+            animation:  1s iconCircle linear;
             border-radius: 50% 50%;
+            background: rgba(9,9,121,0.9339717576483718);
 
             @keyframes iconCircle {
                 0% {background: linear-gradient(180deg, #2e2b2c 0%,
                     rgba(9,9,121,0.9339717576483718) 100%);}
+                50% {background: linear-gradient(#2e2b2c 0%, rgba(9,9,121,0.9339717576483718) 33%, rgba(9,9,121,0.9339717576483718) 66%, #2e2b2c 100%)}
                 100% {background: linear-gradient(180deg, rgba(9,9,121,0.9339717576483718) 0%, #2e2b2c
                      100%);}
             }
